@@ -1,0 +1,18 @@
+def make_album(singer,name,quantity=''):
+    """显示专辑的信息"""
+    album_info={'singer':singer,'name':name}
+    if quantity:
+        album_info['quantity']=quantity
+    return album_info
+Activity=True
+while Activity:
+    print('\n请输入你知道的信息：')
+    print('可输入quit退出')
+    name = input('请输入专辑名： ')
+    if name == 'quit':
+        break
+    singer=input('请输入歌手： ')
+    if singer == 'quit':
+        Activity = False
+    information=make_album(singer,name)
+print(information)
